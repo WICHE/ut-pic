@@ -1,0 +1,13 @@
+# Ignore configuration files that may contain sensitive information.
+#sites/*/settings*.php
+*.sql
+*.zip
+*.psd
+*.html
+
+
+# Ignore paths that contain user-generated content.
+sites/*/files
+sites/*/private
+files/
+sites/all/themes/zen_PsychIntern/images/

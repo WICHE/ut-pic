@@ -1,0 +1,25 @@
+Parallel Development Utah and Idaho PIC sites
+
+Acquire Domain -- Ut-pic is acquired. Id-pic is pending. -- Hannah and Dave Clark
+
+Logo development -- Candy Allen
+
+Site Building/Hosting -- John Fellers -- Week of August 20th
+	Install Drupal 7 and modules
+	Copy and modify a pre-existing PIC theme
+	Set up responsive screen views.
+	Insert UT-PIC Branding (Logo, colors etc.)
+	Test and ensure site is accesible to stakeholders on Amazee Dev Server
+	Modify Robots.txt file such that site is not accesible to Web Crawlers ??
+	Issue Administrative Credentials to Hannah Koch and Liza Tupa
+	
+Content Management -- Week of September 17th
+	Create Pages, blocks and Main Navigation -- John Fellers
+	Photography acquisition: faculty, PIC sites facilities, nice state specific lifestyle and landscape images, (Images provided by PIC state stakeholders,and WIKI Commons) -- Hannah Koch
+	Photography editing -- John Fellers
+	Populate pages with content -- Hannah Koch
+	Stakeholder Review -- Last Week September
+	
+Live Site(s) Launch -- October 1st
+	
+	

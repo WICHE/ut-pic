@@ -1,0 +1,527 @@
+/**
+ * @file
+ * Positioning for a responsive layout.
+ *
+ * Define CSS classes to create a fluid grid layout with optional sidebars
+ * depending on whether blocks are placed in the left or right sidebars.
+ *
+ * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
+ */
+ 
+ /*r:co-pic_test/sites/all/themes/zen_PsychIntern*/
+
+// We are going to create a fluid grid with 1, 3, or 5 columns and 20px gutters
+// between columns (applied as 10px of left/right padding on each column).
+$zen-column-count:  1;
+$zen-gutter-width:  20px;
+
+// If you need IE6/7 support for box-sizing: border-box (default), see _init.scss
+//$zen-box-sizing: content-box;
+
+// You can generate more efficient CSS if you manually apply the
+// zen-grid-item-base mixin to all grid items from within a single ruleset.
+$zen-auto-include-item-base: false;
+// $zen-auto-include-flow-item-base: false;
+
+// Suppress this section of CSS for RTL layouts since it contains no LTR-specific styles.
+@if $zen-reverse-all-floats == false {
+
+/**
+ * Center the page.
+ *
+ * For screen sizes larger than 1200px, prevent excessively long lines of text
+ * by setting a max-width.
+ */
+#page,
+.region-bottom {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  background:#fff;
+}
+
+/* Apply the shared properties of grid items in a single, efficient ruleset. */
+#header,
+#content,
+#navigation,
+.region-sidebar-first,
+.region-sidebar-second,
+#footer {
+  // See the note about $zen-auto-include-item-base above.
+  @include zen-grid-item-base();
+}
+
+#content{
+	margin-top:16px;
+}
+
+#footer{
+	border-top:4px solid #16608F;
+	border-bottom:1px solid #000;
+	background:#1B78B2;
+	padding:10px;
+	
+	p{
+		color:#fff;
+		font-size:.7em;
+		line-height:1em;
+		margin:0;
+	}
+	
+	.block{
+		margin-bottom:0;
+	}
+}
+
+/* Containers for grid items and flow items. */
+#header,
+#main,
+#footer {
+  @include zen-grid-container();
+}
+
+/* Navigation bar */
+@media all and (min-width: 480px) {
+	
+  #main {
+    /* Move all the children of #main down to make room. */
+    padding-top: $nav-height;
+    position: relative;
+  }
+  #navigation {
+    /* Move the navbar up inside #main's padding. */
+    position: absolute;
+    top: 0;
+    height: $nav-height;
+    width: $zen-grid-width;
+  }
+}
+
+} // End of @if $zen-reverse-all-floats == true
+
+/**
+ * Use 3 grid columns for smaller screens.
+ */
+ 
+ @media all and (max-width: 480px) {
+
+  $zen-column-count: 3;
+  
+#page{
+
+	background:#ffffff url(../images/phone-banner-bg.png) 0 0 no-repeat;
+	
+  .header{
+				.header__name-and-slogan {
+					position:relative;
+					top:0;
+					left:0;
+					.header__site-name{
+						line-height:1em;
+						a{
+							color:#000;
+							text-decoration:none;
+							span{
+								/*font-family: 'humnst777_cn_btbold';*/
+								font-family: 'open sans';
+							}
+					}
+					}
+				}
+		.right-logo{
+			display:none;
+		}
+		}//end header
+		
+		
+			/*mobile nav for phones*/
+			#phone-nav{
+				background:#16608f;
+					.nav-toggle{
+						padding:6px;
+					}
+				
+				.region-phone{
+					#block-menu-menu-phone-menu{
+						.menu{
+							li{
+								border-bottom:1px solid #fff;
+								a:link, a:visited, a:active{
+									display:block;
+									padding:4px 4px 4px 8px;
+									color:#fff;
+									text-decoration:none;
+									font-size:1.3em;
+									background:#103b57;
+									line-height:1.8em;
+								}
+								
+								li:last-child{
+									border-bottom:none;
+									padding-bottom:6px;
+								}
+							}
+						}
+					}//end block-menu-menu-phone-menu
+				}//end region-phone
+			}//end phone-nav
+			
+		#main{
+			#content{
+				
+				.hideme{
+					display:block!important;
+				}
+
+	
+				h1{
+					line-height:1.1em;
+					font-size:1.4em;
+					margin-top:20px;
+				}
+				
+				h2{
+					margin-top:0;
+				}
+				
+				article{
+					margin-top:10px;
+				}
+
+				p{
+					font-size:115%;
+					margin-top:0;
+				}
+			}//end content
+		
+		#navigation{	
+				.nice-menu{
+					display:none;
+				}
+			}
+			
+			}//end main
+			
+		}//end page
+ }
+  /*480 to 760px*/
+ @media all and (min-width: 480px) and (max-width: 759px) {
+	 
+	 #page{
+		 .hideme{
+					display:block;
+				}
+	#header{
+		background:url(../images/CO-PIC-banner960.png) 0 0 no-repeat;
+		height:154px;
+		position:relative;
+		
+/* Wrapper for website name and slogan. */
+.header__name-and-slogan {
+  position: absolute;
+  top:108px;
+  left:150px;
+  h1.site-name, a.header__site-link{
+	  font-weight:100;
+	  letter-spacing:1px;
+	  font-size:1em;
+  }
+}
+		
+		.right-logo{
+			display:none!important;
+		}
+	}
+	
+	#navigation{
+			background:#f0f0f0;
+			padding:4px;
+			overflow:visible;
+			margin:8px 0;
+			border-bottom:2px solid #ccc;
+			
+				.search-box{
+							display:none;
+					}
+	}
+	
+		#phone-nav, .nav-toggle{
+			display:none;
+		}
+	
+}//end page  
+			
+ }
+ 
+ /*760px to 959px*/
+@media all and (min-width: 760px) and (max-width: 959px) {
+
+  $zen-column-count: 3;
+
+#page{
+		.hideme{
+			display:none;
+			}
+	#header{
+		background:url(../images/CO-PIC-banner960.png) 0 0 no-repeat;
+		height:154px;
+		position:relative;
+		
+/* Wrapper for website name and slogan. */
+.header__name-and-slogan {
+  position: absolute;
+  top:80px;
+  left:40px;
+  h1.site-name, a.header__site-link{
+	    color: #7a7b7e;
+    font-family: "Open Sans",sans-serif;
+    font-size: .8em;
+    font-weight: 700;
+    text-transform: uppercase;
+	text-decoration:none;
+  }
+}
+		
+		.right-logo{
+			position:absolute;
+			right:35px;
+			top:2px;
+			
+			img{
+				width:100%;
+				max-width:125px;
+				max-height:114px; 
+			}
+		}
+	}
+	
+	#navigation{
+			background:#f0f0f0;
+			padding:4px;
+			overflow:visible;
+			margin:8px 0;
+			border-bottom:2px solid #ccc;
+			
+				.search-box{
+					display:none;
+			}
+			
+			#phone-nav, .nav-toggle{
+			display:none;
+		}
+	}
+	
+}//end page  
+  #phone-nav{
+	  display:none;
+  }
+
+  /**
+   * The layout when there is only one sidebar, the left one.
+   */
+  .sidebar-first {
+    /* Span 2 columns, starting in 2nd column from left. */
+    #content {
+      @include zen-grid-item(2, 2);
+    }
+
+    /* Span 1 column, starting in 1st column from left. */
+    .region-sidebar-first {
+      @include zen-grid-item(1, 1);
+    }
+  }
+
+  /**
+   * The layout when there is only one sidebar, the right one.
+   */
+  .sidebar-second {
+    /* Span 2 columns, starting in 1st column from left. */
+    #content {
+      @include zen-grid-item(2, 1);
+    }
+
+    /* Span 1 column, starting in 3rd column from left. */
+    .region-sidebar-second {
+      @include zen-grid-item(1, 3);
+    }
+  }
+
+  /**
+   * The layout when there are two sidebars.
+   */
+  .two-sidebars {
+    /* Span 2 columns, starting in 2nd column from left. */
+    #content {
+      @include zen-grid-item(2, 2);
+    }
+
+    /* Span 1 column, starting in 1st column from left. */
+    .region-sidebar-first {
+      @include zen-grid-item(1, 1);
+    }
+
+    /* Start a new row and span all 3 columns. */
+    .region-sidebar-second {
+      @include zen-grid-item(3, 1);
+      @include zen-nested-container(); // Since we're making every block in this region be a grid item.
+      @include zen-clear();
+
+      /* Apply the shared properties of grid items in a single, efficient ruleset. */
+      .block {
+        @include zen-grid-item-base();
+      }
+      /* Span 1 column, starting in the 1st column from left. */
+      .block:nth-child(3n+1) {
+        @include zen-grid-item(1, 1);
+        @include zen-clear();
+      }
+      /* Span 1 column, starting in the 2nd column from left. */
+      .block:nth-child(3n+2) {
+        @include zen-grid-item(1, 2);
+      }
+      /* Span 1 column, starting in the 3rd column from left. */
+      .block:nth-child(3n) {
+        @include zen-grid-item(1, 3);
+      }
+    }
+  }
+}
+
+/**
+ * Use 5 grid columns for larger screens.
+ */
+@media all and (min-width: 960px) {
+
+  $zen-column-count: 5;
+
+#page{
+	
+	#header{
+		background:url(../images/CO-PIC-banner.png) 0 0 no-repeat;
+		height:192px;
+		position:relative;
+		
+		/* Wrapper for website name and slogan. */
+			#name-and-slogan {
+			  position: absolute;
+				  top:65px;
+				  left:120px;
+				   width:50%;
+					  h1#site-name{
+						  a.header__site-link{
+							  /*font-family: 'humnst777_cn_btbold';*/
+							  font-family: 'Open Sans', sans-serif;
+							  color:#7a7b7e;
+							  font-weight:700;
+							  letter-spacing:1px;
+							  text-transform:uppercase;
+							  font-size:1.3em;
+							  line-height:1em!important;
+							  text-decoration:none;
+						  }
+					  }
+			}
+
+		
+		.right-logo{
+			position:absolute;
+			right:35px;
+			top:-12px;
+			
+			img{
+				width:100%;
+				max-width:215px;
+				height:auto; 
+			}
+		}
+	}
+	
+	#navigation{
+		background:#f0f0f0;
+		padding:4px;
+		overflow:visible;
+		margin:8px 0;
+		border-bottom:2px solid #ccc;
+		
+			.search-box{
+				position:absolute;
+				top:6px;
+				right:12px;
+		}
+	}
+	
+	#phone-nav, .nav-toggle{
+		display:none;
+	}
+}//end page
+
+
+
+
+  /**
+   * The layout when there is only one sidebar, the left one.
+   */
+  .sidebar-first {
+    /* Span 4 columns, starting in 2nd column from left. */
+    #content {
+      @include zen-grid-item(4, 2);
+	  border-left:1px solid #ccc;
+	  padding-left:16px;
+	  padding-bottom:16px;
+	  .hideme{
+			display:none;
+			}
+    }
+
+    /* Span 1 column, starting in 1st column from left. */
+    .region-sidebar-first {
+      @include zen-grid-item(1, 1);
+	  
+	  .block{
+		  padding-right:12px;
+	  }
+    }
+  }
+
+  /**
+   * The layout when there is only one sidebar, the right one.
+   */
+  .sidebar-second {
+    /* Span 4 columns, starting in 1st column from left. */
+    #content {
+      @include zen-grid-item(4, 1);
+	  .hideme{
+			display:none;
+			}
+    }
+
+    /* Span 1 column, starting in 5th column from left. */
+    .region-sidebar-second {
+      @include zen-grid-item(1, 5);
+    }
+  }
+
+  /**
+   * The layout when there are two sidebars.
+   */
+  .two-sidebars {
+    /* Span 3 columns, starting in 2nd column from left. */
+    #content {
+      @include zen-grid-item(3, 2);
+	  
+	  .hideme{
+			display:none;
+			}
+    }
+
+    /* Span 1 column, starting in 1st column from left. */
+    .region-sidebar-first {
+      @include zen-grid-item(1, 1);
+    }
+
+    /* Span 1 column, starting in 5th column from left. */
+    .region-sidebar-second {
+      @include zen-grid-item(1, 5);
+    }
+  }
+}
