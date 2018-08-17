@@ -26,70 +26,46 @@
 /**
  * HTML5 display definitions
  */
-/* @font-face {
-    font-family: 'humnst777_lt_btlight';
-    src: url('fonts/hum777l-webfont.eot');
-    src: url('fonts/hum777l-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/hum777l-webfont.woff') format('woff'),
-         url('fonts/hum777l-webfont.ttf') format('truetype'),
-         url('fonts/hum777l-webfont.svg#humnst777_lt_btlight') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
+@font-face {
+  font-family: 'humnst777_lt_btlight';
+  src: url("../fonts/hum777l-webfont.eot");
+  src: url("../fonts/hum777l-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/hum777l-webfont.woff") format("woff"), url("../fonts/hum777l-webfont.ttf") format("truetype"), url("../fonts/hum777l-webfont.svg#humnst777_lt_btlight") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'humnst777_lt_btlight_italic';
-    src: url('fonts/hum777li-webfont.eot');
-    src: url('fonts/hum777li-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/hum777li-webfont.woff') format('woff'),
-         url('fonts/hum777li-webfont.ttf') format('truetype'),
-         url('fonts/hum777li-webfont.svg#humnst777_lt_btlight_italic') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'humnst777_lt_btlight_italic';
+  src: url("../fonts/hum777li-webfont.eot");
+  src: url("../fonts/hum777li-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/hum777li-webfont.woff") format("woff"), url("../fonts/hum777li-webfont.ttf") format("truetype"), url("../fonts/hum777li-webfont.svg#humnst777_lt_btlight_italic") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'humnst777_cn_btregular';
-    src: url('fonts/tt1159m-webfont.eot');
-    src: url('fonts/tt1159m-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/tt1159m-webfont.woff') format('woff'),
-         url('fonts/tt1159m-webfont.ttf') format('truetype'),
-         url('fonts/tt1159m-webfont.svg#humnst777_cn_btregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: 'humnst777_cn_btregular';
+  src: url("../fonts/tt1159m-webfont.eot");
+  src: url("../fonts/tt1159m-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/tt1159m-webfont.woff") format("woff"), url("../fonts/tt1159m-webfont.ttf") format("truetype"), url("../fonts/tt1159m-webfont.svg#humnst777_cn_btregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
-
-
-
 @font-face {
-    font-family: 'humnst777_cn_btbold';
-    src: url('fonts/tt1160m-webfont.eot');
-    src: url('fonts/tt1160m-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/tt1160m-webfont.woff') format('woff'),
-         url('fonts/tt1160m-webfont.ttf') format('truetype'),
-         url('fonts/tt1160m-webfont.svg#humnst777_cn_btbold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: 'humnst777_cn_btbold';
+  src: url("../fonts/tt1160m-webfont.eot");
+  src: url("../fonts/tt1160m-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/tt1160m-webfont.woff") format("woff"), url("../fonts/tt1160m-webfont.ttf") format("truetype"), url("../fonts/tt1160m-webfont.svg#humnst777_cn_btbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
-
-
-
 @font-face {
-    font-family: 'humnst777_blkcn_btblack';
-    src: url('fonts/tt1161m-webfont.eot');
-    src: url('fonts/tt1161m-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/tt1161m-webfont.woff') format('woff'),
-         url('fonts/tt1161m-webfont.ttf') format('truetype'),
-         url('fonts/tt1161m-webfont.svg#humnst777_blkcn_btblack') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'humnst777_blkcn_btblack';
+  src: url("../fonts/tt1161m-webfont.eot");
+  src: url("../fonts/tt1161m-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/tt1161m-webfont.woff") format("woff"), url("../fonts/tt1161m-webfont.ttf") format("truetype"), url("../fonts/tt1161m-webfont.svg#humnst777_blkcn_btblack") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 
-}*/
 /* Correct `block` display not defined in IE 8/9. */
 /* line 98, ../sass/_normalize.scss */
 article,
@@ -194,6 +170,11 @@ body {
   background: #a7c5d9;
 }
 
+/* line 198, ../sass/_normalize.scss */
+body.cke_editable {
+  background: white !important;
+}
+
 /**
  * Links
  *
@@ -201,13 +182,13 @@ body {
  * http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
  */
 /* Address `outline` inconsistency between Chrome and other browsers. */
-/* line 214, ../sass/_normalize.scss */
+/* line 218, ../sass/_normalize.scss */
 a:focus {
   outline: thin dotted;
 }
 
 /* Improve readability when focused and also mouse hovered in all browsers. */
-/* line 220, ../sass/_normalize.scss */
+/* line 224, ../sass/_normalize.scss */
 a:active,
 a:hover {
   outline: 0;
@@ -223,13 +204,13 @@ a:hover {
  * For more information, see http://24ways.org/2006/compose-to-a-vertical-rhythm
  */
 /* Set 1 unit of vertical rhythm on the top and bottom margin. */
-/* line 236, ../sass/_normalize.scss */
+/* line 240, ../sass/_normalize.scss */
 p,
 pre {
-  margin: 2em 0;
+  margin: 0 0 16px;
 }
 
-/* line 239, ../sass/_normalize.scss */
+/* line 243, ../sass/_normalize.scss */
 blockquote {
   /* Also indent the quote on both sides. */
   margin: 2em 30px;
@@ -239,21 +220,19 @@ blockquote {
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari 5, and Chrome.
  */
-/* line 248, ../sass/_normalize.scss */
+/* line 252, ../sass/_normalize.scss */
 h1 {
-  /*font-family: 'humnst777_cn_btbold';*/
   font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
   /* Set the font-size and line-height while keeping a proper vertical rhythm. */
   font-size: 2.2em;
   line-height: 1.81818em;
   /* Set 1 unit of vertical rhythm on the top and bottom margins. */
   margin-top: 0.90909em;
   margin-bottom: 0.90909em;
-  color: #3168e2;
+  color: #16608F;
 }
 
-/* line 260, ../sass/_normalize.scss */
+/* line 262, ../sass/_normalize.scss */
 h2 {
   font-size: 1.5em;
   line-height: 1.33333em;
@@ -262,15 +241,15 @@ h2 {
   margin-bottom: 0;
 }
 
-/* line 266, ../sass/_normalize.scss */
+/* line 268, ../sass/_normalize.scss */
 h3 {
   font-size: 1.17em;
   line-height: 1.7094em;
   margin-top: 1.7094em;
-  margin-bottom: 1.7094em;
+  /*@include trailer(1, $h3-font-size);*/
 }
 
-/* line 271, ../sass/_normalize.scss */
+/* line 273, ../sass/_normalize.scss */
 h4 {
   font-size: 1em;
   line-height: 2em;
@@ -278,7 +257,7 @@ h4 {
   margin-bottom: 2em;
 }
 
-/* line 276, ../sass/_normalize.scss */
+/* line 278, ../sass/_normalize.scss */
 h5 {
   font-size: 0.83em;
   line-height: 2.40964em;
@@ -286,7 +265,7 @@ h5 {
   margin-bottom: 2.40964em;
 }
 
-/* line 281, ../sass/_normalize.scss */
+/* line 283, ../sass/_normalize.scss */
 h6 {
   font-size: 0.67em;
   line-height: 2.98507em;
@@ -295,52 +274,45 @@ h6 {
 }
 
 /* Address styling not present in IE 8/9, Safari 5, and Chrome. */
-/* line 288, ../sass/_normalize.scss */
+/* line 290, ../sass/_normalize.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
 
 /* Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome. */
-/* line 294, ../sass/_normalize.scss */
+/* line 296, ../sass/_normalize.scss */
 b,
 strong {
   font-weight: bold;
 }
 
 /* Address styling not present in Safari 5 and Chrome. */
-/* line 299, ../sass/_normalize.scss */
+/* line 301, ../sass/_normalize.scss */
 dfn {
   font-style: italic;
 }
 
 /* Address differences between Firefox and other browsers. */
-/*hr {
-  @include box-sizing(content-box);
+/* line 306, ../sass/_normalize.scss */
+hr {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
   height: 0;
   border: 1px solid #666;
   padding-bottom: -1px;
-  margin: rhythm(1) 0;
-}*/
-/* line 314, ../sass/_normalize.scss */
-hr {
-  border: 0;
-  height: 1px;
-  background: #333;
-  background-image: -webkit-linear-gradient(left, #cccccc, #333333, #cccccc);
-  background-image: -moz-linear-gradient(left, #cccccc, #333333, #cccccc);
-  background-image: -ms-linear-gradient(left, #cccccc, #333333, #cccccc);
-  background-image: -o-linear-gradient(left, #cccccc, #333333, #cccccc);
+  margin: 2em 0;
 }
 
 /* Address styling not present in IE 8/9. */
-/* line 317, ../sass/_normalize.scss */
+/* line 315, ../sass/_normalize.scss */
 mark {
   background: #ff0;
   color: #000;
 }
 
 /* Correct font family set oddly in Safari 5 and Chrome. */
-/* line 328, ../sass/_normalize.scss */
+/* line 326, ../sass/_normalize.scss */
 code,
 kbd,
 pre,
@@ -353,25 +325,25 @@ var {
 }
 
 /* Improve readability of pre-formatted text in all browsers. */
-/* line 337, ../sass/_normalize.scss */
+/* line 335, ../sass/_normalize.scss */
 pre {
   white-space: pre-wrap;
 }
 
 /* Set consistent quote types. */
-/* line 349, ../sass/_normalize.scss */
+/* line 347, ../sass/_normalize.scss */
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
 /* Address inconsistent and variable font size in all browsers. */
-/* line 354, ../sass/_normalize.scss */
+/* line 352, ../sass/_normalize.scss */
 small {
   font-size: 80%;
 }
 
 /* Prevent `sub` and `sup` affecting `line-height` in all browsers. */
-/* line 360, ../sass/_normalize.scss */
+/* line 358, ../sass/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -380,12 +352,12 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 366, ../sass/_normalize.scss */
+/* line 364, ../sass/_normalize.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 369, ../sass/_normalize.scss */
+/* line 367, ../sass/_normalize.scss */
 sub {
   bottom: -0.25em;
 }
@@ -393,7 +365,7 @@ sub {
 /**
  * Lists
  */
-/* line 379, ../sass/_normalize.scss */
+/* line 377, ../sass/_normalize.scss */
 dl,
 menu,
 ol,
@@ -402,7 +374,7 @@ ul {
   margin: 2em 0;
 }
 
-/* line 386, ../sass/_normalize.scss */
+/* line 384, ../sass/_normalize.scss */
 ol ol,
 ol ul,
 ul ol,
@@ -411,14 +383,14 @@ ul ul {
   margin: 0;
 }
 
-/* line 391, ../sass/_normalize.scss */
+/* line 389, ../sass/_normalize.scss */
 dd {
   margin: 0 0 0 30px;
   /* LTR */
 }
 
 /* Address paddings set differently in IE 6/7. */
-/* line 398, ../sass/_normalize.scss */
+/* line 396, ../sass/_normalize.scss */
 menu,
 ol,
 ul {
@@ -431,7 +403,7 @@ ul {
  *
  * @todo Look into adding responsive embedded video.
  */
-/* line 416, ../sass/_normalize.scss */
+/* line 414, ../sass/_normalize.scss */
 img {
   /* Remove border when inside `a` element in IE 8/9. */
   border: 0;
@@ -445,13 +417,13 @@ img {
 }
 
 /* Correct overflow displayed oddly in IE 9. */
-/* line 437, ../sass/_normalize.scss */
+/* line 435, ../sass/_normalize.scss */
 svg:not(:root) {
   overflow: hidden;
 }
 
 /* Address margin not present in IE 8/9 and Safari 5. */
-/* line 442, ../sass/_normalize.scss */
+/* line 440, ../sass/_normalize.scss */
 figure {
   margin: 0;
 }
@@ -460,7 +432,7 @@ figure {
  * Forms
  */
 /* Define consistent border, margin, and padding. */
-/* line 458, ../sass/_normalize.scss */
+/* line 456, ../sass/_normalize.scss */
 fieldset {
   margin: 0 2px;
   /* Apply borders and padding that keep the vertical rhythm. */
@@ -484,7 +456,7 @@ fieldset {
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  * 3. Correct alignment displayed oddly in IE 6/7.
  */
-/* line 473, ../sass/_normalize.scss */
+/* line 471, ../sass/_normalize.scss */
 legend {
   border: 0;
   /* 1 */
@@ -499,7 +471,7 @@ legend {
  * 4. Improve appearance and consistency with IE 6/7.
  * 5. Keep form elements constrained in their containers.
  */
-/* line 491, ../sass/_normalize.scss */
+/* line 489, ../sass/_normalize.scss */
 button,
 input,
 select,
@@ -522,7 +494,7 @@ textarea {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 508, ../sass/_normalize.scss */
+/* line 506, ../sass/_normalize.scss */
 button,
 input {
   line-height: normal;
@@ -534,7 +506,7 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-/* line 519, ../sass/_normalize.scss */
+/* line 517, ../sass/_normalize.scss */
 button,
 select {
   text-transform: none;
@@ -549,7 +521,7 @@ select {
  * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
  *    Known issue: inner spacing remains in IE 6.
  */
-/* line 535, ../sass/_normalize.scss */
+/* line 533, ../sass/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -563,7 +535,7 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 547, ../sass/_normalize.scss */
+/* line 545, ../sass/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -575,7 +547,7 @@ html input[disabled] {
  * 3. Remove excess padding in IE 7.
  *    Known issue: excess padding remains in IE 6.
  */
-/* line 558, ../sass/_normalize.scss */
+/* line 556, ../sass/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   -webkit-box-sizing: border-box;
@@ -591,7 +563,7 @@ input[type="radio"] {
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-/* line 572, ../sass/_normalize.scss */
+/* line 570, ../sass/_normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -605,14 +577,14 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-/* line 582, ../sass/_normalize.scss */
+/* line 580, ../sass/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
 /* Remove inner padding and border in Firefox 4+. */
-/* line 588, ../sass/_normalize.scss */
+/* line 586, ../sass/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -623,7 +595,7 @@ input::-moz-focus-inner {
  * 1. Remove default vertical scrollbar in IE 8/9.
  * 2. Improve readability and alignment in all browsers.
  */
-/* line 597, ../sass/_normalize.scss */
+/* line 595, ../sass/_normalize.scss */
 textarea {
   overflow: auto;
   /* 1 */
@@ -632,7 +604,7 @@ textarea {
 }
 
 /* Drupal-style form labels. */
-/* line 603, ../sass/_normalize.scss */
+/* line 601, ../sass/_normalize.scss */
 label {
   display: block;
   font-weight: bold;
@@ -641,7 +613,7 @@ label {
 /**
  * Tables
  */
-/* line 611, ../sass/_normalize.scss */
+/* line 609, ../sass/_normalize.scss */
 table {
   /* Remove most spacing between table cells. */
   border-collapse: collapse;
@@ -700,22 +672,32 @@ table {
 #content {
   margin-top: 16px;
 }
+/* line 59, ../sass/layouts/_responsive.scss */
+#content .view-site-descriptions h2.field-content a:link, #content .view-site-descriptions h2.field-content a:visited, #content .view-site-descriptions h2.field-content a:active {
+  text-decoration: none;
+  color: #666;
+}
+/* line 62, ../sass/layouts/_responsive.scss */
+#content .view-site-descriptions h2.field-content a:link:hover, #content .view-site-descriptions h2.field-content a:visited:hover, #content .view-site-descriptions h2.field-content a:active:hover {
+  text-decoration: underline;
+  color: #000;
+}
 
-/* line 58, ../sass/layouts/_responsive.scss */
+/* line 71, ../sass/layouts/_responsive.scss */
 #footer {
   border-top: 4px solid #16608F;
   border-bottom: 1px solid #000;
   background: #1B78B2;
   padding: 10px;
 }
-/* line 64, ../sass/layouts/_responsive.scss */
+/* line 77, ../sass/layouts/_responsive.scss */
 #footer p {
   color: #fff;
   font-size: .7em;
   line-height: 1em;
   margin: 0;
 }
-/* line 71, ../sass/layouts/_responsive.scss */
+/* line 84, ../sass/layouts/_responsive.scss */
 #footer .block {
   margin-bottom: 0;
 }
@@ -739,14 +721,14 @@ table {
 
 /* Navigation bar */
 @media all and (min-width: 480px) {
-  /* line 86, ../sass/layouts/_responsive.scss */
+  /* line 99, ../sass/layouts/_responsive.scss */
   #main {
     /* Move all the children of #main down to make room. */
     padding-top: 3em;
     position: relative;
   }
 
-  /* line 91, ../sass/layouts/_responsive.scss */
+  /* line 104, ../sass/layouts/_responsive.scss */
   #navigation {
     /* Move the navbar up inside #main's padding. */
     position: absolute;
@@ -759,48 +741,47 @@ table {
  * Use 3 grid columns for smaller screens.
  */
 @media all and (max-width: 480px) {
-  /* line 110, ../sass/layouts/_responsive.scss */
+  /* line 123, ../sass/layouts/_responsive.scss */
   #page {
     background: white url(../images/phone-banner-bg.png) 0 0 no-repeat;
     /*mobile nav for phones*/
   }
-  /* line 115, ../sass/layouts/_responsive.scss */
-  #page .header .header__name-and-slogan {
+  /* line 127, ../sass/layouts/_responsive.scss */
+  #page .header {
     position: relative;
-    top: 0;
-    left: 0;
+    height: 113px;
   }
-  /* line 119, ../sass/layouts/_responsive.scss */
-  #page .header .header__name-and-slogan .header__site-name {
-    line-height: 1em;
+  /* line 130, ../sass/layouts/_responsive.scss */
+  #page .header .header__name-and-slogan {
+    position: absolute;
+    top: 25px;
+    left: 12px;
   }
-  /* line 121, ../sass/layouts/_responsive.scss */
-  #page .header .header__name-and-slogan .header__site-name a {
-    color: #000;
+  /* line 135, ../sass/layouts/_responsive.scss */
+  #page .header .header__name-and-slogan a {
     text-decoration: none;
   }
-  /* line 124, ../sass/layouts/_responsive.scss */
-  #page .header .header__name-and-slogan .header__site-name a span {
-    /*font-family: 'humnst777_cn_btbold';*/
-    font-family: 'open sans';
+  /* line 137, ../sass/layouts/_responsive.scss */
+  #page .header .header__name-and-slogan a span {
+    font-family: 'humnst777_cn_btbold';
   }
-  /* line 131, ../sass/layouts/_responsive.scss */
-  #page .header .right-logo {
+  /* line 142, ../sass/layouts/_responsive.scss */
+  #page .header .header__logo {
     display: none;
   }
-  /* line 138, ../sass/layouts/_responsive.scss */
+  /* line 149, ../sass/layouts/_responsive.scss */
   #page #phone-nav {
     background: #16608f;
   }
-  /* line 140, ../sass/layouts/_responsive.scss */
+  /* line 151, ../sass/layouts/_responsive.scss */
   #page #phone-nav .nav-toggle {
     padding: 6px;
   }
-  /* line 147, ../sass/layouts/_responsive.scss */
+  /* line 158, ../sass/layouts/_responsive.scss */
   #page #phone-nav .region-phone #block-menu-menu-phone-menu .menu li {
     border-bottom: 1px solid #fff;
   }
-  /* line 149, ../sass/layouts/_responsive.scss */
+  /* line 160, ../sass/layouts/_responsive.scss */
   #page #phone-nav .region-phone #block-menu-menu-phone-menu .menu li a:link, #page #phone-nav .region-phone #block-menu-menu-phone-menu .menu li a:visited, #page #phone-nav .region-phone #block-menu-menu-phone-menu .menu li a:active {
     display: block;
     padding: 4px 4px 4px 8px;
@@ -810,69 +791,65 @@ table {
     background: #103b57;
     line-height: 1.8em;
   }
-  /* line 159, ../sass/layouts/_responsive.scss */
+  /* line 170, ../sass/layouts/_responsive.scss */
   #page #phone-nav .region-phone #block-menu-menu-phone-menu .menu li li:last-child {
     border-bottom: none;
     padding-bottom: 6px;
   }
-  /* line 172, ../sass/layouts/_responsive.scss */
-  #page #main #content .hideme {
-    display: block !important;
-  }
-  /* line 177, ../sass/layouts/_responsive.scss */
-  #page #main #content h1 {
-    line-height: 1.1em;
-    font-size: 1.4em;
-    margin-top: 20px;
-  }
-  /* line 183, ../sass/layouts/_responsive.scss */
-  #page #main #content h2 {
+  /* line 181, ../sass/layouts/_responsive.scss */
+  #page #main #content {
     margin-top: 0;
   }
-  /* line 187, ../sass/layouts/_responsive.scss */
-  #page #main #content article {
-    margin-top: 10px;
+  /* line 185, ../sass/layouts/_responsive.scss */
+  #page #main #content h1 {
+    line-height: 1.1em;
+    font-size: 1.5em;
+    margin-top: 8px;
   }
   /* line 191, ../sass/layouts/_responsive.scss */
+  #page #main #content article {
+    margin-top: 30px;
+  }
+  /* line 195, ../sass/layouts/_responsive.scss */
   #page #main #content p {
     font-size: 115%;
     margin-top: 0;
   }
-  /* line 198, ../sass/layouts/_responsive.scss */
+  /* line 202, ../sass/layouts/_responsive.scss */
   #page #main #navigation .nice-menu {
+    display: none;
+  }
+  /* line 208, ../sass/layouts/_responsive.scss */
+  #page .search-box {
     display: none;
   }
 }
 /*480 to 760px*/
 @media all and (min-width: 480px) and (max-width: 759px) {
-  /* line 211, ../sass/layouts/_responsive.scss */
-  #page .hideme {
-    display: block;
-  }
-  /* line 214, ../sass/layouts/_responsive.scss */
+  /* line 217, ../sass/layouts/_responsive.scss */
   #page #header {
     background: url(../images/CO-PIC-banner960.png) 0 0 no-repeat;
     height: 154px;
     position: relative;
     /* Wrapper for website name and slogan. */
   }
-  /* line 220, ../sass/layouts/_responsive.scss */
+  /* line 223, ../sass/layouts/_responsive.scss */
   #page #header .header__name-and-slogan {
     position: absolute;
-    top: 108px;
-    left: 150px;
+    top: 50px;
+    left: 20px;
+    width: 400px;
   }
-  /* line 224, ../sass/layouts/_responsive.scss */
+  /* line 229, ../sass/layouts/_responsive.scss */
   #page #header .header__name-and-slogan h1.site-name, #page #header .header__name-and-slogan a.header__site-link {
-    font-weight: 100;
     letter-spacing: 1px;
     font-size: 1em;
   }
-  /* line 231, ../sass/layouts/_responsive.scss */
+  /* line 235, ../sass/layouts/_responsive.scss */
   #page #header .right-logo {
     display: none !important;
   }
-  /* line 236, ../sass/layouts/_responsive.scss */
+  /* line 240, ../sass/layouts/_responsive.scss */
   #page #navigation {
     background: #f0f0f0;
     padding: 4px;
@@ -880,56 +857,47 @@ table {
     margin: 8px 0;
     border-bottom: 2px solid #ccc;
   }
-  /* line 243, ../sass/layouts/_responsive.scss */
+  /* line 247, ../sass/layouts/_responsive.scss */
   #page #navigation .search-box {
     display: none;
   }
-  /* line 248, ../sass/layouts/_responsive.scss */
+  /* line 252, ../sass/layouts/_responsive.scss */
   #page #phone-nav, #page .nav-toggle {
+    display: none;
+  }
+  /* line 256, ../sass/layouts/_responsive.scss */
+  #page .search-box {
     display: none;
   }
 }
 /*760px to 959px*/
 @media all and (min-width: 760px) and (max-width: 959px) {
-  /* line 262, ../sass/layouts/_responsive.scss */
-  #page .hideme {
-    display: none;
-  }
-  /* line 265, ../sass/layouts/_responsive.scss */
+  /* line 270, ../sass/layouts/_responsive.scss */
   #page #header {
     background: url(../images/CO-PIC-banner960.png) 0 0 no-repeat;
     height: 154px;
     position: relative;
     /* Wrapper for website name and slogan. */
   }
-  /* line 271, ../sass/layouts/_responsive.scss */
+  /* line 276, ../sass/layouts/_responsive.scss */
   #page #header .header__name-and-slogan {
     position: absolute;
-    top: 80px;
-    left: 40px;
+    top: 30px;
   }
-  /* line 275, ../sass/layouts/_responsive.scss */
+  /* line 279, ../sass/layouts/_responsive.scss */
   #page #header .header__name-and-slogan h1.site-name, #page #header .header__name-and-slogan a.header__site-link {
-    color: #7a7b7e;
+    color: #231f20;
     font-family: "Open Sans",sans-serif;
-    font-size: .8em;
+    font-size: 1em;
     font-weight: 700;
+    letter-spacing: 1px;
     text-transform: uppercase;
-    text-decoration: none;
   }
-  /* line 285, ../sass/layouts/_responsive.scss */
-  #page #header .right-logo {
-    position: absolute;
-    right: 35px;
-    top: 2px;
+  /* line 288, ../sass/layouts/_responsive.scss */
+  #page #header .header__logo {
+    display: none;
   }
-  /* line 290, ../sass/layouts/_responsive.scss */
-  #page #header .right-logo img {
-    width: 100%;
-    max-width: 125px;
-    max-height: 114px;
-  }
-  /* line 298, ../sass/layouts/_responsive.scss */
+  /* line 293, ../sass/layouts/_responsive.scss */
   #page #navigation {
     background: #f0f0f0;
     padding: 4px;
@@ -937,16 +905,18 @@ table {
     margin: 8px 0;
     border-bottom: 2px solid #ccc;
   }
-  /* line 305, ../sass/layouts/_responsive.scss */
-  #page #navigation .search-box {
-    display: none;
-  }
-  /* line 309, ../sass/layouts/_responsive.scss */
+  /* line 300, ../sass/layouts/_responsive.scss */
   #page #navigation #phone-nav, #page #navigation .nav-toggle {
     display: none;
   }
+  /* line 305, ../sass/layouts/_responsive.scss */
+  #page .search-box {
+    position: absolute;
+    right: 30px;
+    top: 90px;
+  }
 
-  /* line 315, ../sass/layouts/_responsive.scss */
+  /* line 312, ../sass/layouts/_responsive.scss */
   #phone-nav {
     display: none;
   }
@@ -954,19 +924,23 @@ table {
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 322, ../sass/layouts/_responsive.scss */
+  /* line 321, ../sass/layouts/_responsive.scss */
   .sidebar-first {
     /* Span 2 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
   }
-  /* line 324, ../sass/layouts/_responsive.scss */
+  /* line 323, ../sass/layouts/_responsive.scss */
   .sidebar-first #content {
     float: left;
     width: 66.66667%;
     margin-left: 33.33333%;
     margin-right: -100%;
   }
-  /* line 329, ../sass/layouts/_responsive.scss */
+  /* line 326, ../sass/layouts/_responsive.scss */
+  .sidebar-first #content .hideme {
+    display: none;
+  }
+  /* line 332, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-sidebar-first {
     float: left;
     width: 33.33333%;
@@ -977,12 +951,12 @@ table {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 337, ../sass/layouts/_responsive.scss */
+  /* line 340, ../sass/layouts/_responsive.scss */
   .sidebar-second {
     /* Span 2 columns, starting in 1st column from left. */
     /* Span 1 column, starting in 3rd column from left. */
   }
-  /* line 339, ../sass/layouts/_responsive.scss */
+  /* line 342, ../sass/layouts/_responsive.scss */
   .sidebar-second #content {
     float: left;
     width: 66.66667%;
@@ -990,6 +964,10 @@ table {
     margin-right: -66.66667%;
   }
   /* line 344, ../sass/layouts/_responsive.scss */
+  .sidebar-second #content .hideme {
+    display: none;
+  }
+  /* line 350, ../sass/layouts/_responsive.scss */
   .sidebar-second .region-sidebar-second {
     float: left;
     width: 33.33333%;
@@ -1000,27 +978,31 @@ table {
   /**
    * The layout when there are two sidebars.
    */
-  /* line 352, ../sass/layouts/_responsive.scss */
+  /* line 358, ../sass/layouts/_responsive.scss */
   .two-sidebars {
     /* Span 2 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
     /* Start a new row and span all 3 columns. */
   }
-  /* line 354, ../sass/layouts/_responsive.scss */
+  /* line 360, ../sass/layouts/_responsive.scss */
   .two-sidebars #content {
     float: left;
     width: 66.66667%;
     margin-left: 33.33333%;
     margin-right: -100%;
   }
-  /* line 359, ../sass/layouts/_responsive.scss */
+  /* line 362, ../sass/layouts/_responsive.scss */
+  .two-sidebars #content .hideme {
+    display: none;
+  }
+  /* line 368, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-first {
     float: left;
     width: 33.33333%;
     margin-left: 0%;
     margin-right: -33.33333%;
   }
-  /* line 364, ../sass/layouts/_responsive.scss */
+  /* line 373, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second {
     float: left;
     width: 100%;
@@ -1034,7 +1016,7 @@ table {
     /* Span 1 column, starting in the 2nd column from left. */
     /* Span 1 column, starting in the 3rd column from left. */
   }
-  /* line 370, ../sass/layouts/_responsive.scss */
+  /* line 379, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block {
     padding-left: 10px;
     padding-right: 10px;
@@ -1044,7 +1026,7 @@ table {
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 374, ../sass/layouts/_responsive.scss */
+  /* line 383, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
     float: left;
     width: 33.33333%;
@@ -1052,14 +1034,14 @@ table {
     margin-right: -33.33333%;
     clear: left;
   }
-  /* line 379, ../sass/layouts/_responsive.scss */
+  /* line 388, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
     float: left;
     width: 33.33333%;
     margin-left: 33.33333%;
     margin-right: -66.66667%;
   }
-  /* line 383, ../sass/layouts/_responsive.scss */
+  /* line 392, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n) {
     float: left;
     width: 33.33333%;
@@ -1071,45 +1053,42 @@ table {
  * Use 5 grid columns for larger screens.
  */
 @media all and (min-width: 960px) {
-  /* line 399, ../sass/layouts/_responsive.scss */
+  /* line 407, ../sass/layouts/_responsive.scss */
   #page #header {
     background: url(../images/CO-PIC-banner.png) 0 0 no-repeat;
     height: 192px;
     position: relative;
     /* Wrapper for website name and slogan. */
   }
-  /* line 405, ../sass/layouts/_responsive.scss */
-  #page #header #name-and-slogan {
+  /* line 413, ../sass/layouts/_responsive.scss */
+  #page #header .header__name-and-slogan {
     position: absolute;
-    top: 65px;
-    left: 120px;
-    width: 50%;
+    top: 70px;
+    left: 50px;
+    width: 550px;
   }
-  /* line 411, ../sass/layouts/_responsive.scss */
-  #page #header #name-and-slogan h1#site-name a.header__site-link {
-    /*font-family: 'humnst777_cn_btbold';*/
+  /* line 418, ../sass/layouts/_responsive.scss */
+  #page #header .header__name-and-slogan h1.site-name, #page #header .header__name-and-slogan a.header__site-link {
     font-family: 'Open Sans', sans-serif;
-    color: #7a7b7e;
+    color: #231f20;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
     font-size: 1.3em;
-    line-height: 1em !important;
-    text-decoration: none;
   }
-  /* line 426, ../sass/layouts/_responsive.scss */
+  /* line 429, ../sass/layouts/_responsive.scss */
   #page #header .right-logo {
     position: absolute;
     right: 35px;
     top: -12px;
   }
-  /* line 431, ../sass/layouts/_responsive.scss */
+  /* line 434, ../sass/layouts/_responsive.scss */
   #page #header .right-logo img {
     width: 100%;
     max-width: 215px;
     height: auto;
   }
-  /* line 439, ../sass/layouts/_responsive.scss */
+  /* line 442, ../sass/layouts/_responsive.scss */
   #page #navigation {
     background: #f0f0f0;
     padding: 4px;
@@ -1117,26 +1096,32 @@ table {
     margin: 8px 0;
     border-bottom: 2px solid #ccc;
   }
-  /* line 446, ../sass/layouts/_responsive.scss */
+  /* line 449, ../sass/layouts/_responsive.scss */
   #page #navigation .search-box {
     position: absolute;
     top: 6px;
     right: 12px;
   }
-  /* line 453, ../sass/layouts/_responsive.scss */
+  /* line 456, ../sass/layouts/_responsive.scss */
   #page #phone-nav, #page .nav-toggle {
     display: none;
+  }
+  /* line 460, ../sass/layouts/_responsive.scss */
+  #page .search-box {
+    position: absolute;
+    right: 30px;
+    top: 135px;
   }
 
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 464, ../sass/layouts/_responsive.scss */
+  /* line 474, ../sass/layouts/_responsive.scss */
   .sidebar-first {
     /* Span 4 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
   }
-  /* line 466, ../sass/layouts/_responsive.scss */
+  /* line 476, ../sass/layouts/_responsive.scss */
   .sidebar-first #content {
     float: left;
     width: 80%;
@@ -1144,20 +1129,38 @@ table {
     margin-right: -100%;
     border-left: 1px solid #ccc;
     padding-left: 16px;
-    padding-bottom: 16px;
   }
-  /* line 471, ../sass/layouts/_responsive.scss */
+  /* line 481, ../sass/layouts/_responsive.scss */
+  .sidebar-first #content p {
+    margin-top: 0;
+  }
+  /* line 487, ../sass/layouts/_responsive.scss */
   .sidebar-first #content .hideme {
     display: none;
   }
-  /* line 477, ../sass/layouts/_responsive.scss */
+  /* line 494, ../sass/layouts/_responsive.scss */
+  .sidebar-first #content .view-site-descriptions .view-content .views-row {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+  }
+  /* line 499, ../sass/layouts/_responsive.scss */
+  .sidebar-first #content .view-site-descriptions .view-content .views-row h2 {
+    margin-bottom: 1.5em;
+  }
+  /* line 503, ../sass/layouts/_responsive.scss */
+  .sidebar-first #content .view-site-descriptions .view-content .views-row p {
+    margin: 0 0 1em 0;
+    line-height: 1.5em;
+  }
+  /* line 513, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-sidebar-first {
     float: left;
     width: 20%;
     margin-left: 0%;
     margin-right: -20%;
   }
-  /* line 480, ../sass/layouts/_responsive.scss */
+  /* line 516, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-sidebar-first .block {
     padding-right: 12px;
   }
@@ -1165,23 +1168,23 @@ table {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 489, ../sass/layouts/_responsive.scss */
+  /* line 525, ../sass/layouts/_responsive.scss */
   .sidebar-second {
     /* Span 4 columns, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 491, ../sass/layouts/_responsive.scss */
+  /* line 527, ../sass/layouts/_responsive.scss */
   .sidebar-second #content {
     float: left;
     width: 80%;
     margin-left: 0%;
     margin-right: -80%;
   }
-  /* line 493, ../sass/layouts/_responsive.scss */
+  /* line 530, ../sass/layouts/_responsive.scss */
   .sidebar-second #content .hideme {
     display: none;
   }
-  /* line 499, ../sass/layouts/_responsive.scss */
+  /* line 536, ../sass/layouts/_responsive.scss */
   .sidebar-second .region-sidebar-second {
     float: left;
     width: 20%;
@@ -1192,31 +1195,31 @@ table {
   /**
    * The layout when there are two sidebars.
    */
-  /* line 507, ../sass/layouts/_responsive.scss */
+  /* line 544, ../sass/layouts/_responsive.scss */
   .two-sidebars {
     /* Span 3 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 509, ../sass/layouts/_responsive.scss */
+  /* line 546, ../sass/layouts/_responsive.scss */
   .two-sidebars #content {
     float: left;
     width: 60%;
     margin-left: 20%;
     margin-right: -80%;
   }
-  /* line 512, ../sass/layouts/_responsive.scss */
+  /* line 549, ../sass/layouts/_responsive.scss */
   .two-sidebars #content .hideme {
     display: none;
   }
-  /* line 518, ../sass/layouts/_responsive.scss */
+  /* line 555, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-first {
     float: left;
     width: 20%;
     margin-left: 0%;
     margin-right: -20%;
   }
-  /* line 523, ../sass/layouts/_responsive.scss */
+  /* line 560, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second {
     float: left;
     width: 20%;
@@ -1299,56 +1302,89 @@ table {
 /* Wrapping link for logo. */
 /* line 81, ../sass/components/_misc.scss */
 .header__logo {
-  float: left;
+  float: right;
   /* LTR */
-  margin: 0;
+  margin: 10px 18px 0 0;
   padding: 0;
-  display: none;
+  display: inline-block;
 }
 
+/*.search-box{
+	position:absolute;
+	right:30px;
+	top:135px;
+}*/
 /* Logo image. */
-/* line 89, ../sass/components/_misc.scss */
+/* line 95, ../sass/components/_misc.scss */
 .header__logo-image {
-  vertical-align: bottom;
-  display: none;
+  /*vertical-align: bottom;
+  display:none;*/
 }
 
 /* Wrapper for website name and slogan. */
 /* The name of the website. */
-/* line 100, ../sass/components/_misc.scss */
+/* line 106, ../sass/components/_misc.scss */
 .header__site-name {
-  /* margin: 0;
-   @include adjust-font-size-to( $h1-font-size );*/
+  margin: 0;
+  padding: 0;
+  line-height: 1.4em !important;
+  /*@include adjust-font-size-to( $h1-font-size );*/
 }
 
 /* The link around the name of the website. */
-/*.header__site-link {
-  &:link,
-  &:visited {
-    color: #000;
-    text-decoration: none;
-  }
+/* line 116, ../sass/components/_misc.scss */
+.header__site-link:link, .header__site-link:visited {
+  color: #000;
+  text-decoration: none;
+}
+/* line 122, ../sass/components/_misc.scss */
+.header__site-link:hover, .header__site-link:focus {
+  text-decoration: underline;
+}
 
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-  }
-}*/
 /* The slogan (or tagline) of a website. */
-/* line 120, ../sass/components/_misc.scss */
+/* line 128, ../sass/components/_misc.scss */
 .header__site-slogan {
   margin: 0;
 }
 
 /* The secondary menu (login, etc.) */
-/* line 125, ../sass/components/_misc.scss */
+/* line 133, ../sass/components/_misc.scss */
 .header__secondary-menu {
   float: right;
   /* LTR */
+  padding-right: 20px;
+}
+/* line 137, ../sass/components/_misc.scss */
+.header__secondary-menu .region-footer-menu ul.menu {
+  list-style: none;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden;
+}
+/* line 143, ../sass/components/_misc.scss */
+.header__secondary-menu .region-footer-menu ul.menu li {
+  background: none !important;
+  list-style: none !important;
+  display: inline-block;
+  float: left;
+}
+/* line 149, ../sass/components/_misc.scss */
+.header__secondary-menu .region-footer-menu ul.menu li:first-child {
+  margin: 0 12px 0;
+}
+/* line 152, ../sass/components/_misc.scss */
+.header__secondary-menu .region-footer-menu ul.menu li a:link, .header__secondary-menu .region-footer-menu ul.menu li a:active, .header__secondary-menu .region-footer-menu ul.menu li a:visited {
+  color: #000;
+  text-decoration: none;
+}
+/* line 156, ../sass/components/_misc.scss */
+.header__secondary-menu .region-footer-menu ul.menu li a:link:hover, .header__secondary-menu .region-footer-menu ul.menu li a:active:hover, .header__secondary-menu .region-footer-menu ul.menu li a:visited:hover {
+  text-decoration: underline;
 }
 
 /* Wrapper for any blocks placed in the header region. */
-/* line 130, ../sass/components/_misc.scss */
+/* line 166, ../sass/components/_misc.scss */
 .header__region {
   /* Clear the logo. */
   clear: both;
@@ -1357,17 +1393,17 @@ table {
 /**
  * Navigation bar.
  */
-/* line 138, ../sass/components/_misc.scss */
+/* line 174, ../sass/components/_misc.scss */
 #navigation {
   /* Sometimes you want to prevent overlapping with main div. */
   /* overflow: hidden; */
   /* Main menu and secondary menu links and menu block links. */
 }
-/* line 142, ../sass/components/_misc.scss */
+/* line 178, ../sass/components/_misc.scss */
 #navigation .block {
   margin-bottom: 0;
 }
-/* line 153, ../sass/components/_misc.scss */
+/* line 189, ../sass/components/_misc.scss */
 #navigation .links,
 #navigation .menu {
   margin: 0;
@@ -1375,7 +1411,7 @@ table {
   text-align: left;
   /* LTR */
 }
-/* line 158, ../sass/components/_misc.scss */
+/* line 194, ../sass/components/_misc.scss */
 #navigation .links li,
 #navigation .menu li {
   /* A simple method to get navigation links to appear in one line. */
@@ -1390,12 +1426,12 @@ table {
 /**
  * Breadcrumb navigation.
  */
-/* line 172, ../sass/components/_misc.scss */
+/* line 208, ../sass/components/_misc.scss */
 .breadcrumb ol {
   margin: 0;
   padding: 0;
 }
-/* line 176, ../sass/components/_misc.scss */
+/* line 212, ../sass/components/_misc.scss */
 .breadcrumb li {
   display: inline;
   list-style-type: none;
@@ -1406,7 +1442,7 @@ table {
 /**
  * Titles.
  */
-/* line 192, ../sass/components/_misc.scss */
+/* line 228, ../sass/components/_misc.scss */
 .page__title,
 .node__title,
 .block__title,
@@ -1420,7 +1456,7 @@ table {
 /**
  * Messages.
  */
-/* line 199, ../sass/components/_misc.scss */
+/* line 235, ../sass/components/_misc.scss */
 .messages, .messages--status, .messages--warning, .messages--error {
   margin: 2em 0;
   padding: 10px 10px 10px 50px;
@@ -1432,50 +1468,50 @@ table {
   border: 1px solid #be7;
 }
 
-/* line 214, ../sass/components/_misc.scss */
+/* line 250, ../sass/components/_misc.scss */
 .messages--warning {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACuElEQVRIiWP4//8/Ay0xSYqntTpnT252zqeJBf0Njhsykrz/pyd6/e9vcNpGVQv6q2wlm0qc/r0+IPD/3UG+/61l9v9mdrjIUc2C7hqHUzc3S///eZwBjO9tF/vfWe1wjioWTKixVm8otPn38wQT3IKfxxn/t5Va/utpsNSg2ILWcttrNzdJgQ3+dpQRjEHs+9tE/zeXWt+gyILOamuTqlxrsOtPLub+7+emBsSq/88v5wL7oqHQ9H9nmbkF2RbUF1rev7lJEuziuU3i/90ddcB4UZsoJC62ifyvK7R4QJYFrcUGrmUZ5v9hYb9hosh/bzcDMN42VRgeF9W5hv8bi/XdSbagKtfs2c1NEvCIPbaQ/7+/pwkYn17Ki0hR24T/l2eZPCfJgsZ83dCiNOP/yCnn7iau/8G+5mD8aBsHSoqqyNL9X5erHUm0BcVpRm9ubhZHMoTh/4eDzP/DA23+RwTZ/P96hAlF7t5Wof8FyfpvibKgNk8noyDZ4D9quofg1Bjr/1kJlhjiIF+Upmn/r83RzCJoQXaC3qcbm8SwGMLwvybP/H8jMGlik7u7VeB/Zqz2J7wWVGdr1uTG62J1PQgfWST1/+hiCaxyIF8UJqv9r8hQrcVpQVqkzrcbG0WwGvB2H/P/lnx5MAaxsam5vYn3f2KY+jesFpSlqfZnxWjidP2OGWL/g/0swBjExu4Lhv958Ur/i5KU+lEsCA1lYI4JUv95bZ0gTo2Pt3P+z0myBmMQG5e6mxu4/kf4Kf8EmQm3oCRNebKrvSawIGPBqRG9sMOp5hjjfwdrlf/58bKT4RaUpWvtcLZV/39iscD/H0AFP46jYwYiMeP/44u4/9tbKQODSXUH3II9G7v18hI0n8YGKv+IDVT6joxj/BVx4mgcOCde/SnITPRUJAHEGlTCEkQV19TAAN8FC67hZdFXAAAAAElFTkSuQmCC');
   border-color: #ed5;
 }
 
-/* line 223, ../sass/components/_misc.scss */
+/* line 259, ../sass/components/_misc.scss */
 .messages--error {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACpElEQVR42rWWTUgbQRiGQ0Tx4MWDeFM8eBA9iKAoggiCoCiiIiL4L3oQV1CJB0UEf6iRYFpK7UniTw9VSqL2kvQsVDBpSZrtRo35czVNW3oprRf17exSl4yzu1ikAy9h59vvedhkMrMGAGoxknAk2w8MJ/WosXThiZkZt9jdLeglPjn5ATc3mhJNuNjbK0QbG3ExMICL/n6IfX0gcxB7ekDAELu6IHZ2IlJbi1hLS1BLogmPtbUhMTv7oMSamzUlqnByMxLT0/8STQkDj9TV4ZLj5OysrODl8jIu5Gs68dFR7JG6dWkJ0fFx+TpSX89IDMnwcHU1yKec12Yz3rlc4HkeLwjkXJpPip3U3+7vIx6P4ymph4eG5PlwTQ0lMdytlmBxMWKtrXLeT0zA5XTibvj9fjxfXETkb/3N/Dz2dneVuiTZtliU/rPSUsQ5ziuxZYG03IIlJdKKUPJjdRUAKMmzuTnskB/VYbdTtd9HR4g2NCi9Z2VliDY1BSnBaUEBzsrLqXyzWCiQ9HU5HA4afniIUFWV0hOqqMBpURErOM7NxWlhIZOvCwvA7S3Uxq+DA5AnZ3pO8vJYQSArC8c5Oeqx2Rj4udeLQH6+6v2B7GxW8DkjA0JmJpONwUHY7XZGIAgCzCYTeJUewmIFfqMRfEoKlQ2yJbza2oLWcLvdeDI2hk/3+iQWKzAYkJzNjg5srq9TwJ9OJ76YTNScx+ORJT66X1/grKyEbW2NgfPp6XKd/JMZySrHaQsSU1Oe+0/w3WpVgyu5HBlR6lc+H8gioevDwz6JrWwV5+3txyoSFk5DcOX1MnCyJ4Vwfb1zt1UY9SR8aioDpuppaVpwZbPTl+hHF04dOKzk8XBF8DgJC3/woU/W/EciOtELOWi8DDwp//215Q+p7kiKh2lQSAAAAABJRU5ErkJggg==');
   border-color: #ed541d;
 }
 
-/* line 233, ../sass/components/_misc.scss */
+/* line 269, ../sass/components/_misc.scss */
 .messages__list {
   margin: 0;
 }
 
-/* line 236, ../sass/components/_misc.scss */
+/* line 272, ../sass/components/_misc.scss */
 .messages__item {
   list-style-image: none;
 }
 
 /* Core/module installation error messages. */
-/* line 241, ../sass/components/_misc.scss */
+/* line 277, ../sass/components/_misc.scss */
 .messages--error p.error {
   color: #333;
 }
 
 /* System status report. */
-/* line 247, ../sass/components/_misc.scss */
+/* line 283, ../sass/components/_misc.scss */
 .ok,
 .messages--status {
   background-color: #f8fff0;
   color: #234600;
 }
 
-/* line 252, ../sass/components/_misc.scss */
+/* line 288, ../sass/components/_misc.scss */
 .warning,
 .messages--warning {
   background-color: #fffce5;
   color: #840;
 }
 
-/* line 257, ../sass/components/_misc.scss */
+/* line 293, ../sass/components/_misc.scss */
 .error,
 .messages--error {
   background-color: #fef5f1;
@@ -1486,7 +1522,7 @@ table {
  * Tabs.
  */
 /* Basic positioning styles shared by primary and secondary tabs. */
-/* line 267, ../sass/components/_misc.scss */
+/* line 303, ../sass/components/_misc.scss */
 .tabs-primary, .tabs-secondary {
   overflow: hidden;
   background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(100%, #bbbbbb), color-stop(100%, transparent));
@@ -1502,7 +1538,7 @@ table {
   white-space: nowrap;
 }
 
-/* line 277, ../sass/components/_misc.scss */
+/* line 313, ../sass/components/_misc.scss */
 .tabs-primary__tab, .tabs-primary__tab.is-active, .tabs-secondary__tab,
 .tabs-secondary__tab.is-active {
   float: left;
@@ -1510,7 +1546,7 @@ table {
   margin: 0 3px;
 }
 
-/* line 281, ../sass/components/_misc.scss */
+/* line 317, ../sass/components/_misc.scss */
 a.tabs-primary__tab-link, a.tabs-primary__tab-link.is-active, a.tabs-secondary__tab-link, a.tabs-secondary__tab-link.is-active {
   border: 1px solid #e9e9e9;
   border-right: 0;
@@ -1521,7 +1557,7 @@ a.tabs-primary__tab-link, a.tabs-primary__tab-link.is-active, a.tabs-secondary__
 }
 
 /* Primary tabs. */
-/* line 294, ../sass/components/_misc.scss */
+/* line 330, ../sass/components/_misc.scss */
 .tabs-primary__tab, .tabs-primary__tab.is-active {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
@@ -1536,12 +1572,12 @@ a.tabs-primary__tab-link, a.tabs-primary__tab-link.is-active, a.tabs-secondary__
   border-bottom: 0 \0/ie;
 }
 
-/* line 303, ../sass/components/_misc.scss */
+/* line 339, ../sass/components/_misc.scss */
 .is-active.tabs-primary__tab {
   border-bottom-color: white;
 }
 
-/* line 309, ../sass/components/_misc.scss */
+/* line 345, ../sass/components/_misc.scss */
 a.tabs-primary__tab-link, a.tabs-primary__tab-link.is-active {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
@@ -1560,13 +1596,13 @@ a.tabs-primary__tab-link, a.tabs-primary__tab-link.is-active {
   text-align: center;
 }
 
-/* line 319, ../sass/components/_misc.scss */
+/* line 355, ../sass/components/_misc.scss */
 a.tabs-primary__tab-link:hover, a.tabs-primary__tab-link:focus {
   background-color: #e9e9e9;
   border-color: #f2f2f2;
 }
 
-/* line 323, ../sass/components/_misc.scss */
+/* line 359, ../sass/components/_misc.scss */
 a.tabs-primary__tab-link:active, a.tabs-primary__tab-link.is-active {
   background-color: transparent;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFE9E9E9', endColorstr='#00E9E9E9');
@@ -1579,20 +1615,20 @@ a.tabs-primary__tab-link:active, a.tabs-primary__tab-link.is-active {
 }
 
 /* Secondary tabs. */
-/* line 347, ../sass/components/_misc.scss */
+/* line 383, ../sass/components/_misc.scss */
 .tabs-secondary {
   font-size: .9em;
   /* Collapse bottom margin of ul.primary. */
   margin-top: -2em;
 }
 
-/* line 354, ../sass/components/_misc.scss */
+/* line 390, ../sass/components/_misc.scss */
 .tabs-secondary__tab,
 .tabs-secondary__tab.is-active {
   margin: 1em 3px;
 }
 
-/* line 360, ../sass/components/_misc.scss */
+/* line 396, ../sass/components/_misc.scss */
 a.tabs-secondary__tab-link, a.tabs-secondary__tab-link.is-active {
   -webkit-border-radius: 0.75em;
   -moz-border-radius: 0.75em;
@@ -1609,14 +1645,14 @@ a.tabs-secondary__tab-link, a.tabs-secondary__tab-link.is-active {
   padding: 0 .5em;
 }
 
-/* line 369, ../sass/components/_misc.scss */
+/* line 405, ../sass/components/_misc.scss */
 a.tabs-secondary__tab-link:hover, a.tabs-secondary__tab-link:focus {
   background-color: #dedede;
   border-color: #999;
   color: #333;
 }
 
-/* line 374, ../sass/components/_misc.scss */
+/* line 410, ../sass/components/_misc.scss */
 a.tabs-secondary__tab-link:active, a.tabs-secondary__tab-link.is-active {
   text-shadow: 1px 1px 0 #333333;
   background-color: #666;
@@ -1628,12 +1664,12 @@ a.tabs-secondary__tab-link:active, a.tabs-secondary__tab-link.is-active {
  * Inline styles.
  */
 /* List of links generated by theme_links(). */
-/* line 402, ../sass/components/_misc.scss */
+/* line 438, ../sass/components/_misc.scss */
 .inline {
   display: inline;
   padding: 0;
 }
-/* line 406, ../sass/components/_misc.scss */
+/* line 442, ../sass/components/_misc.scss */
 .inline li {
   display: inline;
   list-style-type: none;
@@ -1642,7 +1678,7 @@ a.tabs-secondary__tab-link:active, a.tabs-secondary__tab-link.is-active {
 }
 
 /* The inline field label used by the Fences module. */
-/* line 414, ../sass/components/_misc.scss */
+/* line 450, ../sass/components/_misc.scss */
 span.field-label {
   padding: 0 1em 0 0;
   /* LTR */
@@ -1651,19 +1687,19 @@ span.field-label {
 /**
  * "More" links.
  */
-/* line 421, ../sass/components/_misc.scss */
+/* line 457, ../sass/components/_misc.scss */
 .more-link {
   text-align: right;
   /* LTR */
 }
 
-/* line 424, ../sass/components/_misc.scss */
+/* line 460, ../sass/components/_misc.scss */
 .more-help-link {
   text-align: right;
   /* LTR */
 }
 
-/* line 427, ../sass/components/_misc.scss */
+/* line 463, ../sass/components/_misc.scss */
 .more-help-link a {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA7UlEQVR42qWTPQqDQBCFcwSPkCNITpAj5AjeIm1uYpkyR7Cy2Mot7OwsBAsRwUKwmOwLGRle3EIy8PyBfZ/z3J2TiPylz8VWWZZpUB40BonRKyizaxkA88MYYiqCEgv4MTvnZJom0VqWRbz3FlJZgLYtqmEY1Lg9r+sKsIXcLSC3AC019H0vqLquLeC5AfiHYSGkcdAJimKIBQiJ4+CO92OAtm0FNc8zOjkMwE5Q63FAtbeg6zpAYvG8BWR7i5qmQYwY4MIHqYhE2DOPQWcGJBQF2XU72ZzyUeZ5GCNt5/hybJgYdAXsq5sOEE/jG6dC5IOqCXTmAAAAAElFTkSuQmCC');
   background-position: 0 50%;
@@ -1677,14 +1713,14 @@ span.field-label {
  * Pager.
  */
 /* A list of page numbers when more than 1 page of content is available. */
-/* line 442, ../sass/components/_misc.scss */
+/* line 478, ../sass/components/_misc.scss */
 .pager {
   clear: both;
   padding: 0;
   text-align: center;
 }
 
-/* line 447, ../sass/components/_misc.scss */
+/* line 483, ../sass/components/_misc.scss */
 .pager-item,
 .pager-first,
 .pager-previous,
@@ -1697,7 +1733,7 @@ span.field-label {
   background-image: none;
 }
 
-/* line 459, ../sass/components/_misc.scss */
+/* line 495, ../sass/components/_misc.scss */
 .pager-item,
 .pager-first,
 .pager-previous,
@@ -1708,7 +1744,7 @@ span.field-label {
 }
 
 /* The current page's list item. */
-/* line 464, ../sass/components/_misc.scss */
+/* line 500, ../sass/components/_misc.scss */
 .pager-current {
   font-weight: bold;
 }
@@ -1717,7 +1753,7 @@ span.field-label {
  * Blocks.
  */
 /* Block wrapper. */
-/* line 474, ../sass/components/_misc.scss */
+/* line 510, ../sass/components/_misc.scss */
 .block {
   margin-bottom: 2em;
 }
@@ -1725,19 +1761,19 @@ span.field-label {
 /**
  * Menus.
  */
-/* line 481, ../sass/components/_misc.scss */
+/* line 517, ../sass/components/_misc.scss */
 .menu__item.is-leaf {
   list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHBAMAAAA2fErgAAAAD1BMVEX///+/v7+Li4sAAADAwMBFvsw8AAAAAXRSTlMAQObYZgAAAB1JREFUCFtjYAADYwMGBmYVZSDhKAwkFJWhYiAAAB2+Aa/9ugeaAAAAAElFTkSuQmCC');
   list-style-type: square;
 }
 
-/* line 488, ../sass/components/_misc.scss */
+/* line 524, ../sass/components/_misc.scss */
 .menu__item.is-expanded {
   list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABJJREFUeJxj+MdQw2DBIMAABgAUsAHD3c3BpwAAAABJRU5ErkJggg==');
   list-style-type: circle;
 }
 
-/* line 495, ../sass/components/_misc.scss */
+/* line 531, ../sass/components/_misc.scss */
 .menu__item.is-collapsed {
   list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABFJREFUCB1jVmCGQClmEWYOAAZ8AMy3HPLXAAAAAElFTkSuQmCC');
   /* LTR */
@@ -1745,7 +1781,7 @@ span.field-label {
 }
 
 /* The active item in a Drupal menu. */
-/* line 504, ../sass/components/_misc.scss */
+/* line 540, ../sass/components/_misc.scss */
 .menu a.active {
   color: #000;
 }
@@ -1754,7 +1790,7 @@ span.field-label {
  * Marker.
  */
 /* The "new" or "updated" marker. */
-/* line 514, ../sass/components/_misc.scss */
+/* line 550, ../sass/components/_misc.scss */
 .new,
 .update {
   color: #c00;
@@ -1766,7 +1802,7 @@ span.field-label {
  * Unpublished note.
  */
 /* The word "Unpublished" displayed underneath the content. */
-/* line 525, ../sass/components/_misc.scss */
+/* line 561, ../sass/components/_misc.scss */
 .unpublished {
   height: 0;
   overflow: visible;
@@ -1787,31 +1823,31 @@ span.field-label {
  * Comments.
  */
 /* Wrapper for the list of comments and its title. */
-/* line 553, ../sass/components/_misc.scss */
+/* line 589, ../sass/components/_misc.scss */
 .comments {
   margin: 2em 0;
 }
 
 /* Preview of the comment before submitting new or updated comment. */
-/* line 558, ../sass/components/_misc.scss */
+/* line 594, ../sass/components/_misc.scss */
 .comment-preview {
   /* Drupal core will use a #ffffea background. See #1110842. */
   background-color: #ffffea;
 }
 
 /* Wrapper for a single comment. */
-/* line 564, ../sass/components/_misc.scss */
+/* line 600, ../sass/components/_misc.scss */
 .comment {
   /* Comment's permalink wrapper. */
 }
-/* line 567, ../sass/components/_misc.scss */
+/* line 603, ../sass/components/_misc.scss */
 .comment .permalink {
   text-transform: uppercase;
   font-size: 75%;
 }
 
 /* Nested comments are indented. */
-/* line 574, ../sass/components/_misc.scss */
+/* line 610, ../sass/components/_misc.scss */
 .indented {
   /* Drupal core uses a 25px left margin. */
   margin-left: 30px;
@@ -1822,7 +1858,7 @@ span.field-label {
  * Forms.
  */
 /* Wrapper for a form element (or group of form elements) and its label. */
-/* line 584, ../sass/components/_misc.scss */
+/* line 620, ../sass/components/_misc.scss */
 .form-item {
   margin: 2em 0;
   /* Pack groups of checkboxes and radio buttons closer together. */
@@ -1830,47 +1866,47 @@ span.field-label {
   /* Highlight the form elements that caused a form submission error. */
   /* The descriptive help text (separate from the label). */
 }
-/* line 589, ../sass/components/_misc.scss */
+/* line 625, ../sass/components/_misc.scss */
 .form-checkboxes .form-item, .form-radios .form-item {
   /* Drupal core uses "0.4em 0". */
   margin: 0;
 }
-/* line 596, ../sass/components/_misc.scss */
+/* line 632, ../sass/components/_misc.scss */
 tr.odd .form-item, tr.even .form-item {
   margin: 0;
 }
-/* line 603, ../sass/components/_misc.scss */
+/* line 639, ../sass/components/_misc.scss */
 .form-item input.error,
 .form-item textarea.error,
 .form-item select.error {
   border: 1px solid #c00;
 }
-/* line 608, ../sass/components/_misc.scss */
+/* line 644, ../sass/components/_misc.scss */
 .form-item .description {
   font-size: 0.85em;
 }
 
-/* line 615, ../sass/components/_misc.scss */
+/* line 651, ../sass/components/_misc.scss */
 .form-type-radio .description,
 .form-type-checkbox .description {
   margin-left: 2.4em;
 }
 
 /* The part of the label that indicates a required field. */
-/* line 621, ../sass/components/_misc.scss */
+/* line 657, ../sass/components/_misc.scss */
 .form-required {
   color: #c00;
 }
 
 /* Labels for radios and checkboxes. */
-/* line 626, ../sass/components/_misc.scss */
+/* line 662, ../sass/components/_misc.scss */
 label.option {
   display: inline;
   font-weight: normal;
 }
 
 /* Buttons used by contrib modules like Media. */
-/* line 632, ../sass/components/_misc.scss */
+/* line 668, ../sass/components/_misc.scss */
 a.button {
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -1878,14 +1914,14 @@ a.button {
 }
 
 /* Password confirmation. */
-/* line 638, ../sass/components/_misc.scss */
+/* line 674, ../sass/components/_misc.scss */
 .password-parent,
 .confirm-parent {
   margin: 0;
 }
 
 /* Drupal's default login form block. */
-/* line 643, ../sass/components/_misc.scss */
+/* line 679, ../sass/components/_misc.scss */
 #user-login-form {
   text-align: left;
   /* LTR */
@@ -1898,20 +1934,20 @@ a.button {
  * styling of list items.
  */
 /* OpenID creates a new ul above the login form's links. */
-/* line 655, ../sass/components/_misc.scss */
+/* line 691, ../sass/components/_misc.scss */
 .openid-links {
   /* Position OpenID's ul next to the rest of the links. */
   margin-bottom: 0;
 }
 
 /* The "Log in using OpenID" and "Cancel OpenID login" links. */
-/* line 662, ../sass/components/_misc.scss */
+/* line 698, ../sass/components/_misc.scss */
 .openid-link,
 .user-link {
   margin-top: 2em;
 }
 
-/* line 666, ../sass/components/_misc.scss */
+/* line 702, ../sass/components/_misc.scss */
 html.js #user-login-form li.openid-link,
 #user-login-form li.openid-link {
   /* Un-do some of the padding on the ul list. */
@@ -1919,7 +1955,7 @@ html.js #user-login-form li.openid-link,
   /* LTR */
 }
 
-/* line 670, ../sass/components/_misc.scss */
+/* line 706, ../sass/components/_misc.scss */
 #user-login ul {
   margin: 2em 0;
 }
@@ -1927,7 +1963,7 @@ html.js #user-login-form li.openid-link,
 /**
  * Drupal admin tables.
  */
-/* line 678, ../sass/components/_misc.scss */
+/* line 714, ../sass/components/_misc.scss */
 form th {
   text-align: left;
   /* LTR */
@@ -1935,16 +1971,16 @@ form th {
   /* LTR */
   border-bottom: 3px solid #ccc;
 }
-/* line 683, ../sass/components/_misc.scss */
+/* line 719, ../sass/components/_misc.scss */
 form tbody {
   border-top: 1px solid #ccc;
 }
-/* line 686, ../sass/components/_misc.scss */
+/* line 722, ../sass/components/_misc.scss */
 form table ul {
   margin: 0;
 }
 
-/* line 691, ../sass/components/_misc.scss */
+/* line 727, ../sass/components/_misc.scss */
 tr.even,
 tr.odd {
   background-color: #eee;
@@ -1952,26 +1988,26 @@ tr.odd {
   padding: 0.1em 0.6em;
 }
 
-/* line 696, ../sass/components/_misc.scss */
+/* line 732, ../sass/components/_misc.scss */
 tr.even {
   background-color: #fff;
 }
 
 /* Markup generated by theme_tablesort_indicator(). */
-/* line 711, ../sass/components/_misc.scss */
+/* line 747, ../sass/components/_misc.scss */
 td.active {
   background-color: #ddd;
 }
 
 /* Center checkboxes inside table cell. */
-/* line 717, ../sass/components/_misc.scss */
+/* line 753, ../sass/components/_misc.scss */
 td.checkbox,
 th.checkbox {
   text-align: center;
 }
 
 /* Drupal core wrongly puts this in system.menus.css. Since we override that, add it back. */
-/* line 722, ../sass/components/_misc.scss */
+/* line 758, ../sass/components/_misc.scss */
 td.menu-disabled {
   background: #ccc;
 }
@@ -1982,7 +2018,7 @@ td.menu-disabled {
  * @see autocomplete.js
  */
 /* Suggestion list. */
-/* line 733, ../sass/components/_misc.scss */
+/* line 769, ../sass/components/_misc.scss */
 #autocomplete .selected {
   background: #0072b9;
   color: #fff;
@@ -1993,7 +2029,7 @@ td.menu-disabled {
  *
  * @see collapse.js
  */
-/* line 744, ../sass/components/_misc.scss */
+/* line 780, ../sass/components/_misc.scss */
 html.js .collapsible .fieldset-legend {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABJJREFUeJxj+MdQw2DBIMAABgAUsAHD3c3BpwAAAABJRU5ErkJggg==');
   background-position: 5px 65%;
@@ -2002,14 +2038,14 @@ html.js .collapsible .fieldset-legend {
   padding-left: 15px;
   /* LTR */
 }
-/* line 753, ../sass/components/_misc.scss */
+/* line 789, ../sass/components/_misc.scss */
 html.js .collapsed .fieldset-legend {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABFJREFUCB1jVmCGQClmEWYOAAZ8AMy3HPLXAAAAAElFTkSuQmCC');
   /* LTR */
   background-position: 5px 50%;
   /* LTR */
 }
-/* line 760, ../sass/components/_misc.scss */
+/* line 796, ../sass/components/_misc.scss */
 .fieldset-legend .summary {
   color: #999;
   font-size: 0.9em;
@@ -2021,17 +2057,17 @@ html.js .collapsed .fieldset-legend {
  *
  * @see tabledrag.js
  */
-/* line 772, ../sass/components/_misc.scss */
+/* line 808, ../sass/components/_misc.scss */
 tr.drag {
   background-color: #fffff0;
 }
 
-/* line 775, ../sass/components/_misc.scss */
+/* line 811, ../sass/components/_misc.scss */
 tr.drag-previous {
   background-color: #ffd;
 }
 
-/* line 778, ../sass/components/_misc.scss */
+/* line 814, ../sass/components/_misc.scss */
 .tabledrag-toggle-weight {
   font-size: 0.9em;
 }
@@ -2041,7 +2077,7 @@ tr.drag-previous {
  *
  * @see tableselect.js
  */
-/* line 787, ../sass/components/_misc.scss */
+/* line 823, ../sass/components/_misc.scss */
 tr.selected td {
   background: #ffc;
 }
@@ -2051,11 +2087,11 @@ tr.selected td {
  *
  * @see progress.js
  */
-/* line 796, ../sass/components/_misc.scss */
+/* line 832, ../sass/components/_misc.scss */
 .progress {
   font-weight: bold;
 }
-/* line 799, ../sass/components/_misc.scss */
+/* line 835, ../sass/components/_misc.scss */
 .progress .bar {
   background: #ccc;
   border-color: #666;
@@ -2066,103 +2102,63 @@ tr.selected td {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 805, ../sass/components/_misc.scss */
+/* line 841, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1412095792');
+  background-image: url('../images/progress.gif?1524688079');
 }
 
-/* line 811, ../sass/components/_misc.scss */
-ul.menu {
-  list-style: none;
-  border: 1px solid #ccc;
-  margin: 16px 0 0 0;
-  padding: 0;
-}
-/* line 817, ../sass/components/_misc.scss */
-ul.menu li {
-  border-bottom: 1px solid #ccc;
-  margin: 0;
-  padding: 0;
-}
-/* line 823, ../sass/components/_misc.scss */
-ul.menu li a:link, ul.menu li a:visited, ul.menu li a:active {
-  display: block;
-  padding: 6px 12px;
-  color: #666;
-  font-weight: bold;
-  text-decoration: none;
-  line-height: 1em;
-}
-/* line 831, ../sass/components/_misc.scss */
-ul.menu li a:link:hover, ul.menu li a:visited:hover, ul.menu li a:active:hover {
-  color: #ff3434;
-}
-/* line 836, ../sass/components/_misc.scss */
-ul.menu li li:last-child {
-  border-bottom: none;
+/*get rid of top margin on unordered lists*/
+/* line 849, ../sass/components/_misc.scss */
+.objective {
+  margin-top: 0;
 }
 
-/* line 842, ../sass/components/_misc.scss */
-table.nv-pic {
-  width: 75%;
+/*table styling*/
+/* line 856, ../sass/components/_misc.scss */
+table.ak-pic_header_row, table.ak-pic {
+  width: 90%;
+  border: 1px solid #cccccc;
   margin: 0 auto;
-  /*tr:first-child th{
-  		background:#ccc;
-  		color:#000;
-  		text-align:left;
-  		border:none;
-  		padding:6px;
-      }*/
 }
-/* line 853, ../sass/components/_misc.scss */
-table.nv-pic tr th {
+/* line 860, ../sass/components/_misc.scss */
+table.ak-pic_header_row tr:first-child th, table.ak-pic tr:first-child th {
+  background: #ccc;
+  color: #000;
+  text-align: left;
+  border: none;
+  padding: 6px;
+}
+/* line 868, ../sass/components/_misc.scss */
+table.ak-pic_header_row tr th, table.ak-pic tr th {
   text-align: left;
   border: none;
   padding-left: 16px;
 }
-/* line 859, ../sass/components/_misc.scss */
-table.nv-pic tr:nth-child(even) {
+/* line 874, ../sass/components/_misc.scss */
+table.ak-pic_header_row tr:nth-child(even), table.ak-pic tr:nth-child(even) {
   background: #fff;
 }
-/* line 863, ../sass/components/_misc.scss */
-table.nv-pic tr:nth-child(odd) {
+/* line 878, ../sass/components/_misc.scss */
+table.ak-pic_header_row tr:nth-child(odd), table.ak-pic tr:nth-child(odd) {
   background: #f1f1f1;
 }
-/* line 867, ../sass/components/_misc.scss */
-table.nv-pic tr td, table.nv-pic th {
+/* line 882, ../sass/components/_misc.scss */
+table.ak-pic_header_row tr td, table.ak-pic_header_row th, table.ak-pic tr td, table.ak-pic th {
   padding: 6px;
 }
-/* line 871, ../sass/components/_misc.scss */
-table.nv-pic tr td {
+/* line 886, ../sass/components/_misc.scss */
+table.ak-pic_header_row tr td, table.ak-pic tr td {
   border-left: 1px solid #ccc;
-  text-align: center;
 }
-/* line 876, ../sass/components/_misc.scss */
-table.nv-pic tr th {
+/* line 890, ../sass/components/_misc.scss */
+table.ak-pic_header_row tr th, table.ak-pic tr th {
   border: none;
 }
-/* line 881, ../sass/components/_misc.scss */
-table.nv-pic tr th.last-updated {
+/* line 895, ../sass/components/_misc.scss */
+table.ak-pic_header_row tr th.last-updated, table.ak-pic tr th.last-updated {
   font-style: italic;
   font-size: .8em;
-}
-
-/* line 887, ../sass/components/_misc.scss */
-#block-search-form {
-  position: absolute;
-  right: 16px;
-  top: 12px;
-}
-
-/* line 893, ../sass/components/_misc.scss */
-.welcome {
-  font-size: 120%;
-  line-height: 2em;
-}
-/* line 897, ../sass/components/_misc.scss */
-.welcome p {
-  margin: 1em 0;
 }
 
 /**

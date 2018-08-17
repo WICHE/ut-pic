@@ -18,7 +18,7 @@
     <?php if ($logo): ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
     <?php endif; ?>
-
+<div class="search-box"><?php print render($page['search']); ?></div>
     <?php if ($site_name || $site_slogan): ?>
       <div class="header__name-and-slogan" id="name-and-slogan">
         <?php if ($site_name): ?>
@@ -81,7 +81,6 @@
       <?php endif; ?>
 
       <?php print render($page['navigation']); ?>
-		<div class="search-box"><?php print render($page['search']); ?></div>
     </div>
 
     <?php
@@ -101,21 +100,10 @@
 
   <?php print render($page['footer']); ?>
   
-   <?php if ($secondary_menu): ?>
       <nav class="header__secondary-menu" id="secondary-menu" role="navigation">
-        <?php print theme('links__system_secondary_menu', array(
-          'links' => $secondary_menu,
-          'attributes' => array(
-            'class' => array('links', 'inline', 'clearfix'),
-          ),
-          'heading' => array(
-            'text' => $secondary_menu_heading,
-            'level' => 'h2',
-            'class' => array('element-invisible'),
-          ),
-        )); ?>
+        <?php print render($page['footer_menu']); ?>
       </nav>
-    <?php endif; ?>
+
 
 </div>
 

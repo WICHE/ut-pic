@@ -29,29 +29,29 @@ ul.nice-menu li {
 }
 
 ul.nice-menu a {
-  /*font-family: humnst777_lt_btlight;*/
-  font-family: 'Open Sans', sans-serif;
-  font-weight:400;
-  padding: 0.3em 15px 0 8px;
-  color:#000;
-  text-decoration:none;
-  text-transform:uppercase;
-  letter-spacing:1px;
+  	font-family: 'Open Sans', sans-serif;
+	font-size:100%;
+   	font-weight:400;
+ 	padding: 0 15px 0 8px;
+  	color:#000;
+  	text-decoration:none;
+  	text-transform:uppercase;
+  	letter-spacing:1px;
 }
 ul.nice-menu a:hover {
 	color:#ff3434
 }
 ul.nice-menu ul {
-  top: 2.2em;
+  top: 1.8em;
   left: -1px; /* LTR */
   border: 0;
   border-top: 1px solid #ccc;
   margin-right: 0; /* LTR */
-  padding-bottom:6px;
 }
 
 ul.nice-menu ul li {
-  width: 18em;
+  width: 25em;
+  margin:3px 0;
 }
 
 /******************************
@@ -124,6 +124,7 @@ ul.nice-menu-left ul a {
 ul.nice-menu-down {
   float: left; /* LTR */
   border: 0;
+  margin-top:5px;
 }
 
 ul.nice-menu-down li {
@@ -154,11 +155,11 @@ ul.nice-menu-down .menuparent a {
 }
 
 ul.nice-menu-down li.menuparent {
-  background: transparent url("../images/red-arrow-down.png") right 8px no-repeat; /* LTR */
+  background: transparent url("../images/red-arrow-down.png") right 4px no-repeat; /* LTR */
 }
 
 ul.nice-menu-down li.menuparent:hover {
-  background: transparent url("../images/black-arrow-down.png") right 8px no-repeat; /* LTR */
+  background: transparent url("../images/black-arrow-down.png") right 4px no-repeat; /* LTR */
 }
 
 ul.nice-menu-down li li.menuparent {
@@ -171,7 +172,7 @@ ul.nice-menu-down li li.menuparent:hover {
 
 @media all and (min-width: 480px) and (max-width: 959px) {
 		ul.nice-menu a {
-		  padding: 0.8em 12px 0 8px;
+		  padding: 0 12px 0 8px;
 		  letter-spacing:normal;
 		  font-size:.9em;
 	}
