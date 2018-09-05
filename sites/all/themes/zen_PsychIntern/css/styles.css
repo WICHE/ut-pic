@@ -229,7 +229,7 @@ h1 {
   /* Set 1 unit of vertical rhythm on the top and bottom margins. */
   margin-top: 0.90909em;
   margin-bottom: 0.90909em;
-  color: #16608F;
+  color: #a2665c;
 }
 
 /* line 262, ../sass/_normalize.scss */
@@ -299,7 +299,7 @@ hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
-  border: 1px solid #666;
+  border: .5px solid #ccc;
   padding-bottom: -1px;
   margin: 2em 0;
 }
