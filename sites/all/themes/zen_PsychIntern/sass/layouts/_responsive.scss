@@ -517,7 +517,23 @@ $zen-auto-include-item-base: false;
 		  padding-right:12px;
 	  }
     }
-  }
+	  
+	  .view-consortium-faculty{	
+		.views-row{
+			overflow:hidden;
+			padding-bottom:12px;
+			border-bottom:1px solid #ccc;
+				.views-field-field-faculty-portrait .field-content{  
+					float:left;
+					margin-right:16px;
+				  }
+			&:last-child{
+				border-bottom:none;
+			}
+				}
+			}
+  }// end sidebar first
+	
 
   /**
    * The layout when there is only one sidebar, the right one.
