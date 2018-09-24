@@ -1055,7 +1055,7 @@ table {
 @media all and (min-width: 960px) {
   /* line 407, ../sass/layouts/_responsive.scss */
   #page #header {
-    background: url(../images/CO-PIC-banner.png) 0 0 no-repeat;
+    /*background:url(../images/CO-PIC-banner.png) 0 0 no-repeat;*/
     height: 192px;
     position: relative;
     /* Wrapper for website name and slogan. */
