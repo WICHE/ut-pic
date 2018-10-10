@@ -79,16 +79,22 @@
 
 /* Wrapping link for logo. */
 .header__logo {
-  float: left; /* LTR */
-  margin: 0;
+  float: right; /* LTR */
+  margin:10px 18px 0 0;
   padding: 0;
-    display:none;
+    display:inline-block;
 }
+
+/*.search-box{
+	position:absolute;
+	right:30px;
+	top:135px;
+}*/
 
 /* Logo image. */
 .header__logo-image {
-  vertical-align: bottom;
-  display:none;
+  /*vertical-align: bottom;
+  display:none;*/
 }
 
 /* Wrapper for website name and slogan. */
@@ -98,12 +104,14 @@
 
 /* The name of the website. */
 .header__site-name {
- /* margin: 0;
-  @include adjust-font-size-to( $h1-font-size );*/
+  margin: 0;
+  padding:0;
+  line-height:1.4em!important;
+  /*@include adjust-font-size-to( $h1-font-size );*/
 }
 
 /* The link around the name of the website. */
-/*.header__site-link {
+.header__site-link {
   &:link,
   &:visited {
     color: #000;
@@ -114,7 +122,7 @@
   &:focus {
     text-decoration: underline;
   }
-}*/
+}
 
 /* The slogan (or tagline) of a website. */
 .header__site-slogan {
@@ -124,6 +132,34 @@
 /* The secondary menu (login, etc.) */
 .header__secondary-menu {
   float: right; /* LTR */
+  padding-right:20px;
+	  .region-footer-menu{
+		  ul.menu{
+			  list-style:none;
+			  margin:0!important;
+			  padding:0!important;
+			  overflow:hidden;
+			  
+			  li{
+				  background:none!important;
+				  list-style:none!important;
+				  display:inline-block;
+				  float:left;
+				  
+				  &:first-child{
+					  margin:0 12px 0;
+				  }
+				  a:link, a:active, a:visited{
+					  color:#000;
+					  text-decoration:none;
+					  
+					  &:hover{
+						  text-decoration:underline;
+					  }
+				  }
+			  }
+		  }
+	  }
 }
 
 /* Wrapper for any blocks placed in the header region. */
@@ -808,47 +844,26 @@ tr.selected td {
   }
 }
 
-ul.menu{
-	list-style:none;
-	border:1px solid #ccc;
-	margin:16px 0 0 0;
-	padding:0;
-	
-	li{
-		border-bottom:1px solid #ccc;
-		margin:0;
-	    padding:0;
-		
-		
-		a:link, a:visited, a:active{
-			display:block;
-			padding:6px 12px;
-			color:#666;
-			font-weight:bold;
-			text-decoration:none;
-			line-height:1em;
-			
-			&:hover{
-				color:#ff3434;
-			}
-		}
-		
-		li:last-child{
-			border-bottom:none;
-		}
-	}
+
+/*get rid of top margin on unordered lists*/
+.objective{
+	margin-top:0;
 }
 
-table.nv-pic{
-	width:75%;
+/*table styling*/
+
+
+table.ak-pic_header_row, table.ak-pic{
+	width:90%;
+	border:1px solid #cccccc;
 	margin:0 auto;
-		/*tr:first-child th{
+		tr:first-child th{
 				background:#ccc;
 				color:#000;
 				text-align:left;
 				border:none;
 				padding:6px;
-		    }*/
+		    }
 	
 			tr th{
 				text-align:left;
@@ -870,7 +885,6 @@ table.nv-pic{
 	
 			tr td{
 				border-left:1px solid #ccc;
-				text-align:center;
 			}
 			
 			tr th{
@@ -882,19 +896,4 @@ table.nv-pic{
 					font-style:italic;
 					font-size:.8em;
 				}
-}
-
-#block-search-form{
-	position:absolute;
-	right:16px;
-	top:12px;
-}
-
-.welcome{
-	font-size:120%;
-	line-height:2em;
-	
-	p{
-		margin:1em 0;
-	}
 }
